@@ -1,0 +1,682 @@
+{
+  "InputFields": [
+    {
+      "Id": 9,
+      "Name": "in1",
+      "DefaultValue": "test",
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 11,
+      "Name": "TestRecord",
+      "DefaultValue": "3",
+      "Type": "Input",
+      "InputType": "EntityRef",
+      "EntityVersionId": 8,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Id": 10,
+      "Name": "result",
+      "DefaultValue": "[result]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 12,
+      "Name": "Name",
+      "DefaultValue": "[TestRecord:Name]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 13,
+      "Name": "nRecs",
+      "DefaultValue": "[dwList:Count]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 14,
+      "Name": "dwListJson",
+      "DefaultValue": "[dwList:json]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 15,
+      "Name": "Names",
+      "DefaultValue": "[Names]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 16,
+      "Name": "readTest",
+      "DefaultValue": "readTest for record 1 s/b aaa, is [readTest:Name].",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 5,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 5,
+  "GlobalId": "0f2937d0-9787-434b-a18e-2f66d414d32d",
+  "ConfigGenerationGlobalId": "0f2937d0-9787-434b-a18e-2f66d414d32d",
+  "EnvironmentId": 1,
+  "Name": "Dale Test 2023 0725",
+  "Description": "a test workflow",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 15,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 15,
+        "Description": "add some echo wording",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "ApplyTokens",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 71,
+            "Name": "RecursionCount",
+            "Value": "1",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 15,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 72,
+            "Name": "Tokens",
+            "Value": [
+              {
+                "name": "result",
+                "value": "Hello.  The value of in1 = [in1]."
+              },
+              {
+                "name": "Names",
+                "value": "The names are: "
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 15,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1cn2zkp"
+      },
+      {
+        "Id": 18,
+        "Description": "Delete Simple Entity Test DW",
+        "ActionErrorMessage": null,
+        "Condition": "false",
+        "ActionType": "PlantAnApp.DeleteEntity.8f03fd23-8e63-4c7e-83e0-d558324ad965",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 83,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 18,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 84,
+            "Name": "RecordId",
+            "Value": "[TestRecord:Id]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 18,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 85,
+            "Name": "OnError",
+            "Value": {
+              "Id": 17,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 18,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_08ywy9f"
+      },
+      {
+        "Id": 19,
+        "Description": "Read All Simple Entity Test DWs",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PlantAnApp.ReadAllEntity.8f03fd23-8e63-4c7e-83e0-d558324ad965",
+        "OrderIndex": 2,
+        "ActionParameters": [
+          {
+            "Id": 86,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 87,
+            "Name": "Where",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 88,
+            "Name": "RowLimit",
+            "Value": "1000",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 89,
+            "Name": "OrderByClauses",
+            "Value": [
+              "id asc"
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 90,
+            "Name": "OutputToken",
+            "Value": "dwList",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 91,
+            "Name": "OnError",
+            "Value": {
+              "Id": 18,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 19,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_15imrc3"
+      },
+      {
+        "Id": 20,
+        "Description": "Execute Actions for each List Entry",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "ExecuteActionsOnEntityList",
+        "OrderIndex": 3,
+        "ActionParameters": [
+          {
+            "Id": 92,
+            "Name": "EntityName",
+            "Value": "dwList",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 93,
+            "Name": "ContextBehavior",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 96,
+            "Name": "ActionList",
+            "Value": {
+              "Id": 19,
+              "EventName": "click",
+              "Actions": [
+                {
+                  "Id": 25,
+                  "Description": "Untitled Action",
+                  "ActionErrorMessage": null,
+                  "Condition": null,
+                  "ActionType": "ApplyTokens",
+                  "OrderIndex": 0,
+                  "ActionParameters": [
+                    {
+                      "Id": 113,
+                      "Name": "RecursionCount",
+                      "Value": "1",
+                      "ParentParameterId": null,
+                      "IsExpression": false,
+                      "ActionId": 25,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 114,
+                      "Name": "Tokens",
+                      "Value": [
+                        {
+                          "name": "Names",
+                          "value": "[Names][dwList:Name]."
+                        }
+                      ],
+                      "ParentParameterId": null,
+                      "IsExpression": false,
+                      "ActionId": 25,
+                      "OrderIndex": 0
+                    }
+                  ],
+                  "DiagramUID": null
+                }
+              ],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 97,
+            "Name": "ContinueOnError",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 98,
+            "Name": "OnError",
+            "Value": {
+              "Id": 20,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 99,
+            "Name": "Filters",
+            "Value": [],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 20,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1cmizrj"
+      },
+      {
+        "Id": 24,
+        "Description": "Read Simple Entity Test DW",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PlantAnApp.ReadEntity.8f03fd23-8e63-4c7e-83e0-d558324ad965",
+        "OrderIndex": 4,
+        "ActionParameters": [
+          {
+            "Id": 109,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 110,
+            "Name": "RecordId",
+            "Value": "1",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 111,
+            "Name": "OutputToken",
+            "Value": "readTest",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 112,
+            "Name": "OnError",
+            "Value": {
+              "Id": 21,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 24,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_133pue8"
+      },
+      {
+        "Id": 26,
+        "Description": "Update Simple Entity Test DW",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PlantAnApp.UpdateEntity.8f03fd23-8e63-4c7e-83e0-d558324ad965",
+        "OrderIndex": 5,
+        "ActionParameters": [
+          {
+            "Id": 115,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 116,
+            "Name": "RecordId",
+            "Value": "[TestRecord:Id]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 117,
+            "Name": "Name",
+            "Value": "[TestRecord:Name].",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 118,
+            "Name": "LT",
+            "Value": "[TestRecord:LT].",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 119,
+            "Name": "Qty",
+            "Value": {
+              "Qty": {
+                "Qty": "[TestRecord:Qty]"
+              }
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 120,
+            "Name": "OnError",
+            "Value": {
+              "Id": 22,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 26,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_01uxp7p"
+      },
+      {
+        "Id": 27,
+        "Description": "Server Request",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PostData",
+        "OrderIndex": 6,
+        "ActionParameters": [
+          {
+            "Id": 121,
+            "Name": "URL",
+            "Value": "http://example.com",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 122,
+            "Name": "UrlTokenContext",
+            "Value": "Url",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 123,
+            "Name": "UseSSL",
+            "Value": true,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 124,
+            "Name": "Timeout",
+            "Value": "300",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 125,
+            "Name": "HttpMethod",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 126,
+            "Name": "Data",
+            "Value": "name=[FirstName]\npage=[Tab:TabName]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 127,
+            "Name": "DoNotEscapeTokens",
+            "Value": true,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 128,
+            "Name": "DisableReferer",
+            "Value": true,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 129,
+            "Name": "UseDNNProxySettings",
+            "Value": true,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 130,
+            "Name": "AddCurrentCookies",
+            "Value": true,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 131,
+            "Name": "OnError",
+            "Value": {
+              "Id": 23,
+              "EventName": "error",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 132,
+            "Name": "CookieContainerToken",
+            "Value": "cookie",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 133,
+            "Name": "OutputTokenName",
+            "Value": "out1",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 134,
+            "Name": "IgnoreErrors",
+            "Value": true,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 135,
+            "Name": "Headers",
+            "Value": [
+              {
+                "name": "in1",
+                "value": "a1"
+              },
+              {
+                "name": "in2",
+                "value": "b2"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 136,
+            "Name": "OutputHeaders",
+            "Value": [
+              {
+                "name": "b",
+                "value": "bb"
+              },
+              {
+                "name": "a",
+                "value": "aa"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 27,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_108mlvw"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-07-25T16:42:04.9645811+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-07-26T07:29:55.6667247+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "f2c809a7-69e6-4a95-af95-ecf607cfe340"
+}

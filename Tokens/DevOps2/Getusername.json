@@ -1,0 +1,23 @@
+{
+  "id": 22,
+  "globalId": "9a30cc2c-3261-4d7b-986e-9d4c91b1f312",
+  "namespace": {
+    "id": 10,
+    "globalId": "b3a0708e-56c9-4d94-8077-ea2fe187f434",
+    "name": "DevOps2",
+    "isSystem": false
+  },
+  "name": "Getusername",
+  "description": "[DevOps2:getusername.username(userid=\"1\")]",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "select * from users\nwhere userid = [TknParams:userid]",
+    "defaultColumn": "userid",
+    "columns": "username",
+    "connectionString": "",
+    "type": "db"
+  }
+}

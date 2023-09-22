@@ -1,0 +1,159 @@
+{
+  "InputFields": [
+    {
+      "Id": 30,
+      "Name": "Id",
+      "DefaultValue": "",
+      "Type": "Input",
+      "InputType": "Integer",
+      "EntityVersionId": null,
+      "WorkflowId": 18,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Id": 31,
+      "Name": "newinfo",
+      "DefaultValue": "[newinfo:1.Email]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 18,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 32,
+      "Name": "newinfo2",
+      "DefaultValue": "[newinfo:0.Email]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 18,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 18,
+  "GlobalId": "832d307a-69bd-4a73-89ca-b04b1db6984f",
+  "ConfigGenerationGlobalId": "832d307a-69bd-4a73-89ca-b04b1db6984f",
+  "EnvironmentId": 1,
+  "Name": "Newwftest8",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 76,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 96,
+        "Description": "Read All checkbox with treeviews",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PlantAnApp.ReadAllEntity.c0e98bb5-b04c-4fb8-b68a-9a4e8ae6ffa8",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 525,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 96,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 526,
+            "Name": "Where",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 96,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 527,
+            "Name": "RowLimit",
+            "Value": "1000",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 96,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 528,
+            "Name": "OrderByClauses",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 96,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 529,
+            "Name": "OnError",
+            "Value": {
+              "Id": 80,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 96,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 530,
+            "Name": "OutputToken",
+            "Value": "mynetryinfo",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 96,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1eibavo"
+      },
+      {
+        "Id": 95,
+        "Description": "Parse JSON Into Tokens",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "ParseJsonIntoTokens",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 523,
+            "Name": "JsonString",
+            "Value": "[mynetryinfo:json]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 95,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 524,
+            "Name": "BaseTokenName",
+            "Value": "newinfo",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 95,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_12lwom1"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-09-05T14:04:00.3664061+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-09-06T14:17:44.771622+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}

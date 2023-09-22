@@ -1,0 +1,78 @@
+{
+  "ApiId": "cc41f7870710bdaecf31eb",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Untitled Job",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbDelete",
+      "Parameters": {
+        "TableName": {
+          "Value": "paa.MultiEnvironmentSettings",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    },
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbInsert",
+      "Parameters": {
+        "TableName": {
+          "Value": "paa.MultiEnvironmentSettings",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    },
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbUpdate",
+      "Parameters": {
+        "TableName": {
+          "Value": "paa.MultiEnvironmentSettings",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    },
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbUpdateColumn",
+      "Parameters": {
+        "TableName": {
+          "Value": "paa.MultiEnvironmentSettings",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "ColumnsDiffFilter": "shirt"
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "LogEvent",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "3",
+        "LogProperties": [
+          {
+            "name": "name",
+            "value": "name"
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

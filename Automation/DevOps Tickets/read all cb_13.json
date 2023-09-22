@@ -1,0 +1,50 @@
+{
+  "ApiId": "83414ab273246d72dceb4c",
+  "ContextPortal": 0,
+  "ContextUser": 1,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "read all cb",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.ReadAllEntity.c0e98bb5-b04c-4fb8-b68a-9a4e8ae6ffa8",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "ConnectionString": "",
+        "Where": "",
+        "RowLimit": "1000",
+        "OrderByClauses": [
+          "id"
+        ],
+        "OnError": [],
+        "OutputToken": "myval"
+      }
+    },
+    {
+      "ActionType": "LogEvent",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "IsDisabled": false,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "3",
+        "LogProperties": [
+          {
+            "name": "myval",
+            "value": "[myval:json]"
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

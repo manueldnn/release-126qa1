@@ -1,0 +1,260 @@
+{
+  "InputFields": [],
+  "OutputFields": [],
+  "Id": 24,
+  "GlobalId": "1e5959e3-46cb-40e6-b5ab-24724532eb54",
+  "ConfigGenerationGlobalId": "1e5959e3-46cb-40e6-b5ab-24724532eb54",
+  "EnvironmentId": 1,
+  "Name": "Newwftest13",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 101,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 125,
+        "Description": "Create List from SQL",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "LoadEntitiesFromSql",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 661,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 662,
+            "Name": "QueryTimeout",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 663,
+            "Name": "SqlQuery",
+            "Value": "select * from users",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 664,
+            "Name": "EntityName",
+            "Value": "myuserinfo",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 665,
+            "Name": "ClearBeforeLoad",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 666,
+            "Name": "OnError",
+            "Value": {
+              "Id": 102,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 667,
+            "Name": "DbConnector",
+            "Value": {
+              "Entry": "",
+              "Group": null,
+              "EntireGroup": false,
+              "Type": "Database",
+              "IsExpression": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 668,
+            "Name": "BindTokens",
+            "Value": [],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 669,
+            "Name": "EntityProps",
+            "Value": [
+              {
+                "name": "email",
+                "value": "email"
+              },
+              {
+                "name": "username",
+                "value": "username"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 125,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_10ldhvd"
+      },
+      {
+        "Id": 126,
+        "Description": "Execute Actions for each List Entry",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "ExecuteActionsOnEntityList",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 670,
+            "Name": "ContextBehavior",
+            "Value": "UpdateAllTokens",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 126,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 674,
+            "Name": "ActionList",
+            "Value": {
+              "Id": 103,
+              "EventName": "click",
+              "Actions": [
+                {
+                  "Id": 128,
+                  "Description": "Untitled Action",
+                  "ActionErrorMessage": null,
+                  "Condition": null,
+                  "ActionType": "LogEvent",
+                  "OrderIndex": 0,
+                  "ActionParameters": [
+                    {
+                      "Id": 679,
+                      "Name": "EventType",
+                      "Value": "ADMIN_ALERT",
+                      "ParentParameterId": null,
+                      "IsExpression": false,
+                      "ActionId": 128,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 680,
+                      "Name": "UserID",
+                      "Value": "3",
+                      "ParentParameterId": null,
+                      "IsExpression": false,
+                      "ActionId": 128,
+                      "OrderIndex": 0
+                    },
+                    {
+                      "Id": 681,
+                      "Name": "LogProperties",
+                      "Value": [
+                        {
+                          "name": "email",
+                          "value": "[myuserinfo:email]"
+                        },
+                        {
+                          "name": "username",
+                          "value": "[myuserinfo:username]"
+                        }
+                      ],
+                      "ParentParameterId": null,
+                      "IsExpression": false,
+                      "ActionId": 128,
+                      "OrderIndex": 0
+                    }
+                  ],
+                  "DiagramUID": null
+                }
+              ],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 126,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 675,
+            "Name": "ContinueOnError",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 126,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 676,
+            "Name": "OnError",
+            "Value": {
+              "Id": 104,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 126,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 677,
+            "Name": "Filters",
+            "Value": [],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 126,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 678,
+            "Name": "EntityName",
+            "Value": "myuserinfo",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 126,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1qy8j7y"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-09-20T12:07:39.5279148+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-09-20T12:19:42.0664301+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "c9111d72-ddda-4957-ba2f-25a63eea51d3"
+}

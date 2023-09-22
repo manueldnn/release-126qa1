@@ -1,0 +1,36 @@
+{
+  "ApiId": "b7493b9e564866cfc0bb81",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "validari",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "RunSql",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select * from users",
+        "OnError": [],
+        "ShowErrors": "False",
+        "DbConnector": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "Database",
+          "EntireGroup": false
+        },
+        "BindTokens": [],
+        "OutputTokenName": "",
+        "ExtractColumns": []
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

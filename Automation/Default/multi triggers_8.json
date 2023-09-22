@@ -1,0 +1,55 @@
+{
+  "ApiId": "c047fbb3409ebb2f54ac1a",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "multi triggers",
+  "Triggers": [
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbDelete",
+      "Parameters": {
+        "TableName": {
+          "Value": "paa.VersionControl_ChangeTracking",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    },
+    {
+      "IsEnabled": true,
+      "TriggerDefId": "OnDbUpdate",
+      "Parameters": {
+        "TableName": {
+          "Value": "paa.MultiEnvironmentSettings",
+          "IsExpression": false,
+          "Expression": null
+        }
+      }
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "LogEvent",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "",
+        "LogProperties": [
+          {
+            "name": "name",
+            "value": null
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

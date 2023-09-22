@@ -1,0 +1,21 @@
+@inherits avt.MyTokens.Core.ParsingEngine.RazorTemplate
+<html>
+    <head>
+        <title>Math Operators</title>
+    </head>
+    <body>
+        @{            
+            int num1, num2,  plus, minus, multi, divide;
+            num1 = 45;
+            num2 = 9;
+            plus = num1 + num2;
+            minus = num1 - num2;
+            multi = num1 * num2;
+            divide = num1 / num2;
+        }
+        <h5>Addition : @num1 + @num2  = @plus</h5>
+        <h5>Subtraction : @num1  - @num2  = @minus</h5>
+        <h5>Multiplication : @num1  * @num2  = @multi</h5>
+        <h5>Divide : @num1 / @num2 = @divide</h5>
+    </body>
+</html>

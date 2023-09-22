@@ -1,0 +1,52 @@
+{
+  "ApiId": "5c4359b2cb17f2aa85a6a1",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "fewfew",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "SendMail",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "From": "",
+        "To": "",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "",
+        "Format": {
+          "Value": "Html",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "DnnEmailTemplate": {
+          "Value": null,
+          "IsExpression": false,
+          "Expression": null
+        },
+        "Body": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "OnError": [],
+        "IgnoreErros": "",
+        "Credentials": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "smtp",
+          "EntireGroup": false
+        },
+        "Headers": []
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

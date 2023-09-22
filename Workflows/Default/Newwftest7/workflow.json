@@ -1,0 +1,59 @@
+{
+  "InputFields": [],
+  "OutputFields": [],
+  "Id": 17,
+  "GlobalId": "073537ba-8bd4-476f-a095-568d325077ee",
+  "ConfigGenerationGlobalId": "073537ba-8bd4-476f-a095-568d325077ee",
+  "EnvironmentId": 1,
+  "Name": "Newwftest7",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 75,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 90,
+        "Description": "Create/Update Tokens",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "ApplyTokens",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 503,
+            "Name": "RecursionCount",
+            "Value": "1",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 90,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 504,
+            "Name": "Tokens",
+            "Value": [
+              {
+                "name": "vsavsafewfewfew",
+                "value": ""
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 90,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0me1fva"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-09-05T13:46:45.7566913+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-09-05T13:57:43.1937099+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}

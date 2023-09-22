@@ -1,0 +1,144 @@
+{
+  "ApiId": "6f4022a05080cdfef15aaf",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Send Email - SMTP ",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "ExecuteActions",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "ActionList": [
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "487317a6-6488-411e-ac07-79ddc190c01d",
+            "ActionType": "SendMail",
+            "OrderIndex": 0,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": true,
+            "Parameters": {
+              "From": "",
+              "To": "george.grigore@plantanapp.com",
+              "DetermineEmail": "",
+              "ToAllUsers": "",
+              "ReplyTo": "",
+              "Cc": "",
+              "Bcc": "",
+              "Subject": "",
+              "Format": {
+                "Value": "Html",
+                "IsExpression": false,
+                "Expression": null
+              },
+              "DnnEmailTemplate": {
+                "Value": null,
+                "IsExpression": false,
+                "Expression": null
+              },
+              "Body": "<p>Send</p>",
+              "PortalFiles": "",
+              "FileToken1": "",
+              "OnError": [
+                {
+                  "Id": -1,
+                  "IsDeleted": false,
+                  "isSelected": false,
+                  "uiIdentifier": "6a9c9820-74d1-47d0-99ef-9898bb82d9dd",
+                  "ActionType": "LogEvent",
+                  "OrderIndex": 0,
+                  "Description": "Untitled Action",
+                  "Condition": null,
+                  "IsDisabled": false,
+                  "isExpanded": true,
+                  "Parameters": {
+                    "EventType": {
+                      "Value": "ADMIN_ALERT",
+                      "IsExpression": false,
+                      "Expression": null
+                    },
+                    "UserID": "",
+                    "LogProperties": [
+                      {
+                        "name": "name",
+                        "value": "inside send email "
+                      }
+                    ]
+                  }
+                }
+              ],
+              "IgnoreErros": true,
+              "Credentials": {
+                "Group": "6",
+                "Entry": "bb981bbd-ddb9-4aaf-8f20-ea034ef6202b",
+                "IsExpression": false,
+                "Expression": "",
+                "Type": "smtp",
+                "EntireGroup": false
+              },
+              "Headers": []
+            }
+          }
+        ],
+        "OnError": [
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "9966a7ab-1edc-4f3e-b3aa-e797de26b0f3",
+            "ActionType": "LogEvent",
+            "OrderIndex": 0,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": false,
+            "Parameters": {
+              "EventType": {
+                "Value": "ADMIN_ALERT",
+                "IsExpression": false,
+                "Expression": null
+              },
+              "UserID": "3",
+              "LogProperties": [
+                {
+                  "name": "on error ",
+                  "value": "from execute actions"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "ActionType": "LogEvent",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "IsDisabled": false,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "3",
+        "LogProperties": [
+          {
+            "name": "send email",
+            "value": "after error "
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

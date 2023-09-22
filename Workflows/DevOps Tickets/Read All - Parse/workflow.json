@@ -1,0 +1,170 @@
+{
+  "InputFields": [
+    {
+      "Id": 22,
+      "Name": "EntryId",
+      "DefaultValue": null,
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 10,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Id": 19,
+      "Name": "allentriesinjson",
+      "DefaultValue": "[readres:Json]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 10,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 20,
+      "Name": "parsedjsonname",
+      "DefaultValue": "[parsedreadres:0.Name]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 10,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 21,
+      "Name": "count",
+      "DefaultValue": "[readres:count]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 10,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 10,
+  "GlobalId": "0a68243d-e659-4b03-a9dc-e45ff4fc335a",
+  "ConfigGenerationGlobalId": "0a68243d-e659-4b03-a9dc-e45ff4fc335a",
+  "EnvironmentId": 1,
+  "Name": "Read All - Parse",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 42,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 44,
+        "Description": "Read All Ent1s",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PlantAnApp.ReadAllEntity.6865914a-29de-44a9-8bcc-307d98d194fa",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 221,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 44,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 222,
+            "Name": "Where",
+            "Value": "Id = [EntryId]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 44,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 223,
+            "Name": "RowLimit",
+            "Value": "1000",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 44,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 224,
+            "Name": "OrderByClauses",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 44,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 225,
+            "Name": "OutputToken",
+            "Value": "readres",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 44,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 226,
+            "Name": "OnError",
+            "Value": {
+              "Id": 43,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 44,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1mhfn14"
+      },
+      {
+        "Id": 45,
+        "Description": "Parse JSON Into Tokens",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "ParseJsonIntoTokens",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 227,
+            "Name": "JsonString",
+            "Value": "[readres:Json]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 45,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 228,
+            "Name": "BaseTokenName",
+            "Value": "parsedreadres",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 45,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1wkok23"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-07-26T11:51:37.508691+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-07-26T14:02:03.2789812+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "c9111d72-ddda-4957-ba2f-25a63eea51d3"
+}

@@ -1,0 +1,301 @@
+{
+  "Name": "Ent1",
+  "Description": "Creates a new record of type Ent1",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 1,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "Name",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"Name is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "email",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 1,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "doc",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 2,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "role",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 3,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "img",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 4,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "user",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 5,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "date",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 6,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "datetime",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 7,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "datetimelocal",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 8,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "time",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 9,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "timeutc",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 10,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "url",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 11,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "boolean",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 12,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "noi",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 13,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "nod",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 14,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    },
+    {
+      "Name": "money",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 15,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.6865914a-29de-44a9-8bcc-307d98d194fa",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "Name": "[Name]",
+        "email": "[email]",
+        "doc": "[doc]",
+        "role": "[role]",
+        "img": "[img]",
+        "user": "[user]",
+        "date": "[date]",
+        "datetime": "[datetime]",
+        "datetimelocal": "[datetimelocal]",
+        "time": "[time]",
+        "timeutc": "[timeutc]",
+        "url": "[url]",
+        "boolean": "[boolean]",
+        "noi": "[noi]",
+        "nod": "[nod]",
+        "money": "[money]"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "6865914a-29de-44a9-8bcc-307d98d194fa",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.6865914a-29de-44a9-8bcc-307d98d194fa",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "6865914a-29de-44a9-8bcc-307d98d194fa",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "Name",
+            "value": "[CreatedRecord:Name]"
+          },
+          {
+            "name": "email",
+            "value": "[CreatedRecord:email]"
+          },
+          {
+            "name": "doc",
+            "value": "[CreatedRecord:doc]"
+          },
+          {
+            "name": "role",
+            "value": "[CreatedRecord:role]"
+          },
+          {
+            "name": "img",
+            "value": "[CreatedRecord:img]"
+          },
+          {
+            "name": "user",
+            "value": "[CreatedRecord:user]"
+          },
+          {
+            "name": "date",
+            "value": "[CreatedRecord:date]"
+          },
+          {
+            "name": "datetime",
+            "value": "[CreatedRecord:datetime]"
+          },
+          {
+            "name": "datetimelocal",
+            "value": "[CreatedRecord:datetimelocal]"
+          },
+          {
+            "name": "time",
+            "value": "[CreatedRecord:time]"
+          },
+          {
+            "name": "timeutc",
+            "value": "[CreatedRecord:timeutc]"
+          },
+          {
+            "name": "url",
+            "value": "[CreatedRecord:url]"
+          },
+          {
+            "name": "boolean",
+            "value": "[CreatedRecord:boolean]"
+          },
+          {
+            "name": "noi",
+            "value": "[CreatedRecord:noi]"
+          },
+          {
+            "name": "nod",
+            "value": "[CreatedRecord:nod]"
+          },
+          {
+            "name": "money",
+            "value": "[CreatedRecord:money]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://release-126qa1.apps.plantanapp.com/en-us/api/Ent1?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

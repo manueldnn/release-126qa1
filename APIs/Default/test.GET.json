@@ -1,0 +1,37 @@
+{
+  "Name": "test",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "RunSql",
+      "OrderIndex": 0,
+      "Parameters": {
+        "ConnectionString": "",
+        "QueryTimeout": "",
+        "SqlQuery": "select * from users",
+        "OnError": [],
+        "ShowErrors": "False",
+        "DbConnector": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "Database",
+          "EntireGroup": false
+        },
+        "BindTokens": [],
+        "OutputTokenName": "",
+        "ExtractColumns": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

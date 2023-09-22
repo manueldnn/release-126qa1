@@ -1,0 +1,58 @@
+{
+  "ApiId": "9f409cb59f8443abe1c759",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "save file",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "ApplyTokens",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "RecursionCount": "1",
+        "Tokens": [
+          {
+            "name": "anotherDeploy",
+            "value": " /saveFileTests/another"
+          }
+        ]
+      }
+    },
+    {
+      "ActionType": "SaveFileToDisk",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "IsDisabled": false,
+      "Parameters": {
+        "InputMode": {
+          "Value": "Text",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "Content": "this is rtetefssaasd",
+        "Folder": {
+          "Value": "/[DeployFolder]",
+          "IsExpression": true,
+          "Expression": "[anotherDeploy]"
+        },
+        "Pattern": "",
+        "Duplicates": {
+          "Value": "Rename",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "AbsoluteURLOutputTokenName": "",
+        "RelativeURLOutputTokenName": "",
+        "PhysicalPathOutputTokenName": "",
+        "LinkClickOutputTokenName": "",
+        "FileIdOutputTokenName": ""
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

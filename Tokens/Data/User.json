@@ -1,0 +1,24 @@
+{
+  "id": 29,
+  "globalId": "05015b8b-5596-47e4-ac94-a18030fa5c3a",
+  "namespace": {
+    "id": 9,
+    "globalId": "d89e73c8-3e48-4dbd-959f-19302bec8d63",
+    "name": "Data",
+    "description": "",
+    "isSystem": false
+  },
+  "name": "User",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "language": "csharp",
+    "compiledRazorLocation": "host",
+    "additionalAssemblies": "",
+    "debug": false,
+    "type": "razor"
+  }
+}

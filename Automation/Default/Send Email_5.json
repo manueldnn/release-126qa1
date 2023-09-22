@@ -1,0 +1,100 @@
+{
+  "ApiId": "4d4d57b03af5b665e31de5",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Send Email",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "SendMail",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "From": "",
+        "To": "george.grigore@plantanapp.com",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "",
+        "Format": {
+          "Value": "Html",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "DnnEmailTemplate": {
+          "Value": null,
+          "IsExpression": false,
+          "Expression": null
+        },
+        "Body": "<p>Send</p>",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "OnError": [
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "82a9ec18-0233-48c5-a953-459d1bbaabb3",
+            "ActionType": "LogEvent",
+            "OrderIndex": 0,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": true,
+            "Parameters": {
+              "EventType": {
+                "Value": "ADMIN_ALERT",
+                "IsExpression": false,
+                "Expression": null
+              },
+              "UserID": "3",
+              "LogProperties": [
+                {
+                  "name": "err",
+                  "value": "err"
+                }
+              ]
+            }
+          }
+        ],
+        "IgnoreErros": true,
+        "Credentials": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "smtp",
+          "EntireGroup": false
+        },
+        "Headers": []
+      }
+    },
+    {
+      "ActionType": "LogEvent",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 1,
+      "IsDisabled": false,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "3",
+        "LogProperties": [
+          {
+            "name": "send email",
+            "value": "after error "
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

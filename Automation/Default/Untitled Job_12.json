@@ -1,0 +1,27 @@
+{
+  "ApiId": "154b9a83ed44a7a9fef63f",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Untitled Job",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "ApplyTokens",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "RecursionCount": "1",
+        "Tokens": [
+          {
+            "name": "fw",
+            "value": null
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

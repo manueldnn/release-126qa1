@@ -1,0 +1,144 @@
+{
+  "ApiId": "0b48e39cd513ced28d6961",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Execute Actions - On Error",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "ExecuteActions",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "ActionList": [
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "cd20b8a5-59bb-4329-b046-d1ea0ff13c41",
+            "ActionType": "RunSql",
+            "OrderIndex": 0,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": true,
+            "Parameters": {
+              "ConnectionString": "",
+              "QueryTimeout": "",
+              "SqlQuery": "x select * from users\r\nwhere userid = 2",
+              "OnError": [],
+              "ShowErrors": "False",
+              "DbConnector": {
+                "Group": null,
+                "Entry": "",
+                "IsExpression": false,
+                "Expression": "",
+                "Type": "Database",
+                "EntireGroup": false
+              },
+              "BindTokens": [],
+              "OutputTokenName": "myuserdetails",
+              "ExtractColumns": [
+                {
+                  "name": "username",
+                  "value": "username"
+                },
+                {
+                  "name": "email",
+                  "value": "email"
+                }
+              ]
+            }
+          },
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "0b6588c6-e262-462f-84ca-14f5bf09a9a1",
+            "ActionType": "ApplyTokens",
+            "OrderIndex": 1,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": false,
+            "Parameters": {
+              "RecursionCount": "1",
+              "Tokens": [
+                {
+                  "name": "myusername",
+                  "value": "[myuserdetails:username]"
+                },
+                {
+                  "name": "myemail",
+                  "value": "[myuserdetails:email]"
+                }
+              ]
+            }
+          },
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "bb4df66a-59b3-43cc-b6ca-3e45331b6e51",
+            "ActionType": "LogEvent",
+            "OrderIndex": 2,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": false,
+            "Parameters": {
+              "EventType": {
+                "Value": "ADMIN_ALERT",
+                "IsExpression": false,
+                "Expression": null
+              },
+              "UserID": "3",
+              "LogProperties": [
+                {
+                  "name": "username",
+                  "value": "[myusername]"
+                },
+                {
+                  "name": "email",
+                  "value": "[myemail]"
+                }
+              ]
+            }
+          }
+        ],
+        "OnError": [
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "daa4e606-f8ce-4485-abde-bf16582450d6",
+            "ActionType": "LogEvent",
+            "OrderIndex": 0,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": false,
+            "Parameters": {
+              "EventType": {
+                "Value": "ADMIN_ALERT",
+                "IsExpression": false,
+                "Expression": null
+              },
+              "UserID": "3",
+              "LogProperties": [
+                {
+                  "name": "execute actions ",
+                  "value": "failed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

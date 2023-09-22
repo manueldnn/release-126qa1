@@ -1,0 +1,329 @@
+{
+  "InputFields": [
+    {
+      "Id": 38,
+      "Name": "username",
+      "DefaultValue": null,
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 25,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Id": 39,
+      "Name": "result",
+      "DefaultValue": "[result]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 25,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 25,
+  "GlobalId": "9323f607-f4f3-4fa2-b01c-4a5154904923",
+  "ConfigGenerationGlobalId": "9323f607-f4f3-4fa2-b01c-4a5154904923",
+  "EnvironmentId": 1,
+  "Name": "Newwftest14",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 105,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 130,
+        "Description": null,
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "RunSql",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 684,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 685,
+            "Name": "QueryTimeout",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 686,
+            "Name": "SqlQuery",
+            "Value": "select * from users\nwhere username = '[username]'",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 687,
+            "Name": "BindTokens",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 688,
+            "Name": "OutputTokenName",
+            "Value": "userinfo",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 689,
+            "Name": "ExtractColumns",
+            "Value": [
+              {
+                "value": "userid",
+                "name": "userid"
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 690,
+            "Name": "OnError",
+            "Value": {
+              "Id": 106,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 691,
+            "Name": "ShowErrors",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 717,
+            "Name": "DbConnector",
+            "Value": {
+              "Group": "3",
+              "EntireGroup": false,
+              "Type": "Database",
+              "IsExpression": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 130,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1im6ob2"
+      },
+      {
+        "Id": 148,
+        "Description": "",
+        "ActionErrorMessage": "",
+        "Condition": "",
+        "ActionType": "PlantAnApp.ExecuteConditionally",
+        "OrderIndex": 1,
+        "ActionParameters": [
+          {
+            "Id": 750,
+            "Name": "ConditionedActions",
+            "Value": [
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[userinfo:userid] != ''"
+                },
+                "Actions": {
+                  "Id": 123,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 138,
+                      "Description": "",
+                      "ActionErrorMessage": "",
+                      "Condition": "",
+                      "ActionType": "PlantAnApp.ExecuteConditionally",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 718,
+                          "Name": "ConditionedActions",
+                          "Value": [
+                            {
+                              "Condition": {
+                                "IsExpression": false,
+                                "Expression": "",
+                                "Value": "[userinfo:userid] != 1"
+                              },
+                              "Actions": {
+                                "Id": 114,
+                                "EventName": "click",
+                                "Actions": [
+                                  {
+                                    "Id": 139,
+                                    "Description": null,
+                                    "ActionErrorMessage": null,
+                                    "Condition": null,
+                                    "ActionType": "InjectData",
+                                    "OrderIndex": 0,
+                                    "ActionParameters": [
+                                      {
+                                        "Id": 720,
+                                        "Name": "Data",
+                                        "Value": [
+                                          {
+                                            "value": "not1",
+                                            "name": "result"
+                                          }
+                                        ],
+                                        "ParentParameterId": null,
+                                        "IsExpression": false,
+                                        "ActionId": 139,
+                                        "OrderIndex": 0
+                                      }
+                                    ],
+                                    "DiagramUID": "Activity_1uiygli"
+                                  }
+                                ],
+                                "IsInvalid": false
+                              }
+                            },
+                            {
+                              "Condition": {
+                                "IsExpression": false,
+                                "Expression": "",
+                                "Value": "[userinfo:userid] == 1"
+                              },
+                              "Actions": {
+                                "Id": 115,
+                                "EventName": "click",
+                                "Actions": [
+                                  {
+                                    "Id": 140,
+                                    "Description": null,
+                                    "ActionErrorMessage": null,
+                                    "Condition": null,
+                                    "ActionType": "InjectData",
+                                    "OrderIndex": 0,
+                                    "ActionParameters": [
+                                      {
+                                        "Id": 723,
+                                        "Name": "Data",
+                                        "Value": [
+                                          {
+                                            "value": "is1",
+                                            "name": "result"
+                                          }
+                                        ],
+                                        "ParentParameterId": null,
+                                        "IsExpression": false,
+                                        "ActionId": 140,
+                                        "OrderIndex": 0
+                                      }
+                                    ],
+                                    "DiagramUID": "Activity_15zzq95"
+                                  }
+                                ],
+                                "IsInvalid": false
+                              }
+                            }
+                          ],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 138,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Gateway_1drncbd"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              },
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "[userinfo:userid] == ''"
+                },
+                "Actions": {
+                  "Id": 124,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 149,
+                      "Description": null,
+                      "ActionErrorMessage": null,
+                      "Condition": null,
+                      "ActionType": "InjectData",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 754,
+                          "Name": "Data",
+                          "Value": [
+                            {
+                              "value": "empty",
+                              "name": "result"
+                            }
+                          ],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 149,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_1bnx4ys"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 148,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Gateway_0painfl"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-09-20T12:21:32.5736685+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-09-20T14:29:08.6632361+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "c9111d72-ddda-4957-ba2f-25a63eea51d3"
+}

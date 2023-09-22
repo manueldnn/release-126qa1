@@ -1,0 +1,65 @@
+{
+  "Name": "checkboxwithtreeviews",
+  "Description": "Returns the information of all checkbox with treeview records in JSON object format.",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 63,
+  "CrossDomainPolicy": "Public",
+  "Input": [
+    {
+      "Name": "RowLimit",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "number",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"RowLimit is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {}
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "PlantAnApp.ReadAllEntity.c0e98bb5-b04c-4fb8-b68a-9a4e8ae6ffa8",
+      "OrderIndex": 0,
+      "Parameters": {
+        "ConnectionString": "",
+        "Where": "",
+        "RowLimit": "[RowLimit]",
+        "OrderByClauses": "",
+        "OnError": [],
+        "OutputToken": "checkboxwithtreeviews"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Untitled Action",
+      "ActionType": "RawResponse",
+      "OrderIndex": 1,
+      "Parameters": {
+        "Content": "{\"checkboxwithtreeviews\" : [checkboxwithtreeviews:json]}",
+        "HttpCode": "200 OK",
+        "Headers": [
+          {
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

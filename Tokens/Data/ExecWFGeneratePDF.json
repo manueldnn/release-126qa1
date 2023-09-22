@@ -1,0 +1,22 @@
+{
+  "id": 30,
+  "globalId": "20445368-c551-4215-aff8-b26c7934314f",
+  "namespace": {
+    "id": 9,
+    "globalId": "d89e73c8-3e48-4dbd-959f-19302bec8d63",
+    "name": "Data",
+    "description": "",
+    "isSystem": false
+  },
+  "name": "ExecWFGeneratePDF",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "workflowUid": "8428bb63-ba78-4847-a274-30cf9566b416",
+    "defaultOutputField": "AbsoluteURL",
+    "type": "execworkflow"
+  }
+}

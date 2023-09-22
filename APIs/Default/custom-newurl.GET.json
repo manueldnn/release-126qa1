@@ -1,0 +1,34 @@
+{
+  "Name": "custom-newurl",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [
+    {
+      "Name": "myval",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "RawResponse",
+      "OrderIndex": 0,
+      "Parameters": {
+        "Content": "something\n[myval]",
+        "HttpCode": "",
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

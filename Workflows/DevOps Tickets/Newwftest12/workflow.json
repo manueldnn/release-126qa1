@@ -1,0 +1,141 @@
+{
+  "InputFields": [
+    {
+      "Id": 34,
+      "Name": "name",
+      "DefaultValue": null,
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 23,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 35,
+      "Name": "email",
+      "DefaultValue": null,
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 23,
+      "IsDeleted": false,
+      "Required": false
+    },
+    {
+      "Id": 37,
+      "Name": "noi",
+      "DefaultValue": null,
+      "Type": "Input",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 23,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "OutputFields": [
+    {
+      "Id": 36,
+      "Name": "myres",
+      "DefaultValue": "[myres2]",
+      "Type": "Output",
+      "InputType": "Text",
+      "EntityVersionId": null,
+      "WorkflowId": 23,
+      "IsDeleted": false,
+      "Required": false
+    }
+  ],
+  "Id": 23,
+  "GlobalId": "badc08e4-df26-4224-8869-fb20fa95a7ad",
+  "ConfigGenerationGlobalId": "badc08e4-df26-4224-8869-fb20fa95a7ad",
+  "EnvironmentId": 1,
+  "Name": "Newwftest12",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 99,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 124,
+        "Description": "Create New checkbox with treeview",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PlantAnApp.CreateEntity.c0e98bb5-b04c-4fb8-b68a-9a4e8ae6ffa8",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 655,
+            "Name": "ConnectionString",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 124,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 656,
+            "Name": "name",
+            "Value": "[name]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 124,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 657,
+            "Name": "email",
+            "Value": "[email]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 124,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 658,
+            "Name": "int",
+            "Value": "[noi]",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 124,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 659,
+            "Name": "OutputToken",
+            "Value": "myres2",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 124,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 660,
+            "Name": "OnError",
+            "Value": {
+              "Id": 100,
+              "EventName": "OnError",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 124,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1yie8v4"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-09-20T12:03:12.5139738+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-09-20T12:04:09.6158977+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "c9111d72-ddda-4957-ba2f-25a63eea51d3"
+}

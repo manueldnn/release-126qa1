@@ -1,0 +1,30 @@
+{
+  "ApiId": "a7472e8e35b6b5fe44ca73",
+  "ContextPortal": 0,
+  "IsDebug": false,
+  "IsEnabled": true,
+  "Name": "Untitled Job",
+  "Triggers": [],
+  "Actions": [
+    {
+      "ActionType": "ExecuteActionsOnEntityList",
+      "Description": "Untitled Action",
+      "ExecutionType": "OnExecute",
+      "OrderIndex": 0,
+      "IsDisabled": false,
+      "Parameters": {
+        "ContextBehavior": {
+          "Value": "UpdateAllTokens",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "ActionList": [],
+        "ContinueOnError": "",
+        "OnError": [],
+        "Filters": [],
+        "EntityName": ""
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

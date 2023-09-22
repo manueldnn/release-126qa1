@@ -1,0 +1,168 @@
+{
+  "InputFields": [],
+  "OutputFields": [],
+  "Id": 2,
+  "GlobalId": "45568468-176b-4411-ba28-4db1ab82320a",
+  "ConfigGenerationGlobalId": "45568468-176b-4411-ba28-4db1ab82320a",
+  "EnvironmentId": 1,
+  "Name": "New GG1",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 4,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 5,
+        "Description": "Send email",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "SendMail",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 22,
+            "Name": "From",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 23,
+            "Name": "To",
+            "Value": "george.grigore@plantanapp.com",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 24,
+            "Name": "DetermineEmail",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 25,
+            "Name": "ToAllUsers",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 26,
+            "Name": "ReplyTo",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 27,
+            "Name": "Cc",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 28,
+            "Name": "Bcc",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 29,
+            "Name": "Subject",
+            "Value": "Test",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 30,
+            "Name": "Format",
+            "Value": "Html",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 31,
+            "Name": "Body",
+            "Value": "<p>george.grigore@plantanapp.com</p>",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 32,
+            "Name": "PortalFiles",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 33,
+            "Name": "FileToken1",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 34,
+            "Name": "Credentials",
+            "Value": {
+              "Entry": "",
+              "Group": null,
+              "EntireGroup": false,
+              "Type": "smtp",
+              "IsExpression": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 35,
+            "Name": "Headers",
+            "Value": [],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 5,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_0omot6m"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-07-05T13:24:36.8738685+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-07-05T13:26:55.9183588+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}

@@ -1,0 +1,53 @@
+{
+  "Name": "asdsad",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "SendMail",
+      "OrderIndex": 0,
+      "Parameters": {
+        "From": "",
+        "To": "",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "",
+        "Format": {
+          "Value": "Html",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "DnnEmailTemplate": {
+          "Value": null,
+          "IsExpression": false,
+          "Expression": null
+        },
+        "Body": "",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "OnError": [],
+        "IgnoreErros": "",
+        "Credentials": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "smtp",
+          "EntireGroup": false
+        },
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

@@ -1,0 +1,185 @@
+{
+  "InputFields": [],
+  "OutputFields": [],
+  "Id": 6,
+  "GlobalId": "d5741c1c-40c1-40bb-9545-8a60ec12d20f",
+  "ConfigGenerationGlobalId": "d5741c1c-40c1-40bb-9545-8a60ec12d20f",
+  "EnvironmentId": 1,
+  "Name": "Server Request Test",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 24,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 28,
+        "Description": "Server Request",
+        "ActionErrorMessage": null,
+        "Condition": null,
+        "ActionType": "PostData",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 137,
+            "Name": "URL",
+            "Value": "http://google.com",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 138,
+            "Name": "UrlTokenContext",
+            "Value": "Url",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 139,
+            "Name": "UseSSL",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 140,
+            "Name": "Timeout",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 141,
+            "Name": "HttpMethod",
+            "Value": "post",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 142,
+            "Name": "Data",
+            "Value": "{\"a\": \"aaa\"}",
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 143,
+            "Name": "DoNotEscapeTokens",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 144,
+            "Name": "DisableReferer",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 145,
+            "Name": "UseDNNProxySettings",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 146,
+            "Name": "AddCurrentCookies",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 147,
+            "Name": "OnError",
+            "Value": {
+              "Id": 25,
+              "EventName": "error",
+              "Actions": [],
+              "IsInvalid": false
+            },
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 148,
+            "Name": "CookieContainerToken",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 149,
+            "Name": "OutputTokenName",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 150,
+            "Name": "IgnoreErrors",
+            "Value": null,
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 151,
+            "Name": "Headers",
+            "Value": [],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          },
+          {
+            "Id": 152,
+            "Name": "OutputHeaders",
+            "Value": [],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 28,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Activity_1icwsre"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 3,
+  "CreatedOn": "2023-07-25T21:10:36.6839497+00:00",
+  "LastModifiedBy": 3,
+  "LastModifiedOn": "2023-07-25T21:10:36.6839497+00:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}

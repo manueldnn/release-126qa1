@@ -1,0 +1,102 @@
+{
+  "Name": "sendEmailTest",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [],
+  "Actions": [
+    {
+      "Description": "Untitled Action",
+      "ActionType": "SendMail",
+      "OrderIndex": 1,
+      "Parameters": {
+        "From": "",
+        "To": "george.grigore@plantanapp.com",
+        "DetermineEmail": "",
+        "ToAllUsers": "",
+        "ReplyTo": "",
+        "Cc": "",
+        "Bcc": "",
+        "Subject": "",
+        "Format": {
+          "Value": "Html",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "DnnEmailTemplate": {
+          "Value": null,
+          "IsExpression": false,
+          "Expression": null
+        },
+        "Body": "<p>Send</p>",
+        "PortalFiles": "",
+        "FileToken1": "",
+        "OnError": [
+          {
+            "Id": -1,
+            "IsDeleted": false,
+            "isSelected": false,
+            "uiIdentifier": "66cf58db-f1b9-4d7c-a9ef-e6371411513b",
+            "ActionType": "LogEvent",
+            "OrderIndex": 0,
+            "Description": "Untitled Action",
+            "Condition": null,
+            "IsDisabled": false,
+            "isExpanded": true,
+            "Parameters": {
+              "EventType": {
+                "Value": "ADMIN_ALERT",
+                "IsExpression": false,
+                "Expression": null
+              },
+              "UserID": "3",
+              "LogProperties": [
+                {
+                  "name": "inner error",
+                  "value": "in send email"
+                }
+              ]
+            }
+          }
+        ],
+        "IgnoreErros": "",
+        "Credentials": {
+          "Group": null,
+          "Entry": "",
+          "IsExpression": false,
+          "Expression": "",
+          "Type": "smtp",
+          "EntireGroup": false
+        },
+        "Headers": []
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "Description": "Untitled Action",
+      "ActionType": "LogEvent",
+      "OrderIndex": 2,
+      "Parameters": {
+        "EventType": {
+          "Value": "ADMIN_ALERT",
+          "IsExpression": false,
+          "Expression": null
+        },
+        "UserID": "",
+        "LogProperties": [
+          {
+            "name": "outer log",
+            "value": "outside send email"
+          }
+        ]
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}

@@ -1,0 +1,24 @@
+{
+  "id": 31,
+  "globalId": "e9d08569-33e3-48ab-a37c-a12995fbc798",
+  "namespace": {
+    "id": 9,
+    "globalId": "d89e73c8-3e48-4dbd-959f-19302bec8d63",
+    "name": "Data",
+    "description": "",
+    "isSystem": false
+  },
+  "name": "HTTPReq",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "url": "https://release-126qa1.apps.plantanapp.com/api/my-new_end",
+    "get": "fileid=[TknParams:fileid]",
+    "post": "",
+    "headers": "",
+    "type": "http"
+  }
+}

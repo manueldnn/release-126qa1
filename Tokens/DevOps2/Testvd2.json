@@ -1,0 +1,20 @@
+{
+  "id": 24,
+  "globalId": "a9a0174e-9b34-468d-bbd6-27d6054b24df",
+  "namespace": {
+    "id": 10,
+    "globalId": "b3a0708e-56c9-4d94-8077-ea2fe187f434",
+    "name": "DevOps2",
+    "isSystem": false
+  },
+  "name": "Testvd2",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "value": "something",
+    "type": "string"
+  }
+}

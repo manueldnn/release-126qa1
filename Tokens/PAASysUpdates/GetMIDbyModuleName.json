@@ -1,0 +1,24 @@
+{
+  "id": 10,
+  "globalId": "5958c439-69cc-4ba0-b7d7-857e46de07ec",
+  "namespace": {
+    "id": 1,
+    "globalId": "b0fad6e2-9453-4009-b2f5-fc4705e7b325",
+    "name": "PAASysUpdates",
+    "description": "",
+    "isSystem": true
+  },
+  "name": "GetMIDbyModuleName",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "SELECT ModuleID\r\nFROM TabModules\r\nWHERE TabID = '[TknParams:TabID]' AND ModuleTitle = '[TknParams:ModuleName]'",
+    "defaultColumn": "ModuleID",
+    "columns": "",
+    "connectionString": "",
+    "type": "db"
+  }
+}
